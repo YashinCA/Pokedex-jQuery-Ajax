@@ -1,0 +1,121 @@
+.contenedor {
+    width: 1050px;
+    background-color: burlywood;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+    width: 300px;
+    display: block;
+    margin: 0px auto 25px auto;
+}
+
+.img-pokemon {
+    display: inline-block;
+    width: 648px;
+}
+
+.pokemon {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: 2px solid goldenrod;
+    width: 88px;
+    background-image: url(assets/pokeball.jpg);
+    background-size: 88px;
+}
+
+.info-pokemon {
+    width: 312px;
+    height: 292px;
+    /* border: 3px solid blue; */
+    position: sticky;
+    top: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pokedex {
+    width: 337px;
+    border-radius: 26px;
+}
+
+.pokemon-img-Pokedex {
+    position: absolute;
+    top: 126px;
+    right: 0px;
+    left: 130px;
+    bottom: 0px;
+    width: 111px;
+}
+
+.name-pokemon {
+    position: absolute;
+    top: 56px;
+    right: 0px;
+    left: 27px;
+    bottom: 0px;
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    min-width: 40px;
+    height: 18px;
+    justify-content: center;
+}
+
+.type-pokemon {
+    position: absolute;
+    top: 111px;
+    right: 0px;
+    left: 27px;
+    bottom: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+}
+
+.list-type {
+    position: absolute;
+    top: 122px;
+    right: 0px;
+    left: 26px;
+    bottom: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: block;
+    text-align: center;
+    list-style: none;
+    font-size: 14px;
+}
+
+.heigth-pokemon {
+    position: absolute;
+    top: 93px;
+    right: 81px;
+    left: 0px;
+    bottom: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+}
+
+.weight-pokemon {
+    position: absolute;
+    top: 69px;
+    right: 83px;
+    left: 0px;
+    bottom: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+}

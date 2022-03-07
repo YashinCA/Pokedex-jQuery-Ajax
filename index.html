@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="Pokedex.css">
+    <script>
+        $(document).ready(function() {
+            $("img").on('click', function() {
+                let idpoke = $(this).attr('id');
+                console.log('id', idpoke)
+                $('.pokemon-img-Pokedex').remove();
+                var url = "https://pokeapi.co/api/v2/pokemon/" + idpoke + "/";
+                $.get(url, function(res) {
+                    console.log('height', res.height)
+                    console.log('weigth', res.weight)
+                    $('.info-pokemon').append("<img class=pokemon-img-Pokedex id=" + res.idpoke + " src='" + res.sprites.front_default + "' id='" + res.idpoke + "'>");
+                    $(".weight-pokemon").html('<h3 class="weight-pokemon">Weight<br>' + res.weight + '</h3>');
+                    $(".heigth-pokemon").html('<h3 class="heigth-pokemon">Height<br>' + res.height + '</h3>');
+                    $(".name-pokemon").html('<h3 class="name-pokemon">' + res.name + '</h3>');
+                    $(".type-pokemon").html('<h3 class="type-pokemon">Types</h3>');
+                    var html_str = "";
+                    html_str += "<ul class='list-type'>";
+                    for (var i = 0; i < res.types.length; i++) {
+                        html_str += "<li>" + res.types[i].type.name + "</li>";
+                    }
+                    html_str += "</ul>";
+                    $(".list-type").html(html_str);
+                }, "json");
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <img src="assets/Pokemon-logo.png" alt="logo Pokemon" class="logo">
+        <div class="img-pokemon">
+        </div>
+        <div class="info-pokemon">
+            <img class="pokedex" src="assets/pokedex.JPG" alt="pokedex">
+            <img class="pokemon-img-Pokedex" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png" alt="">
+            <h3 class="name-pokemon"></h3>
+            <h3 class="type-pokemon"></h3>
+            <ul class='list-type'></ul>
+            <h3 class="heigth-pokemon"><br></h3>
+            <h3 class="weight-pokemon"><br></h3>
+        </div>
+
+        <script>
+            for (let i = 1; i <= 151; i++) {
+                $('.img-pokemon').append('<img class="pokemon" id=' + [i] + ' src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + [i] + '.png">')
+            }
+        </script>
+
+</body>
+
+</html>
